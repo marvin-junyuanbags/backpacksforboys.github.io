@@ -26,17 +26,19 @@ function initNavigation() {
     // Active link highlighting
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
-            e.preventDefault();
-            
-            // Remove active class from all links
-            navLinks.forEach(l => l.classList.remove('active'));
-            
-            // Add active class to clicked link
-            this.classList.add('active');
-            
-            // Smooth scroll to section
             const targetId = this.getAttribute('href');
+            
+            // Only prevent default for anchor links (starting with #)
             if (targetId.startsWith('#')) {
+                e.preventDefault();
+                
+                // Remove active class from all links
+                navLinks.forEach(l => l.classList.remove('active'));
+                
+                // Add active class to clicked link
+                this.classList.add('active');
+                
+                // Smooth scroll to section
                 const targetSection = document.querySelector(targetId);
                 if (targetSection) {
                     targetSection.scrollIntoView({
@@ -44,6 +46,10 @@ function initNavigation() {
                         block: 'start'
                     });
                 }
+            } else {
+                // For external links, just update active state and allow normal navigation
+                navLinks.forEach(l => l.classList.remove('active'));
+                this.classList.add('active');
             }
         });
     });
