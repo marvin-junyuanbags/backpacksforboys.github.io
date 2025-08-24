@@ -8,6 +8,7 @@
     <link rel="icon" type="image/svg+xml" href="../images/logo.svg">
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="../js/translations.js"></script>
 </head>
 <body>
     <!-- Header -->
@@ -22,24 +23,63 @@
                 
                 <ul class="nav-menu">
                     <li class="nav-item">
-                        <a href="../index.html" class="nav-link">Home</a>
+                        <a href="../index.html" class="nav-link" data-translate="home">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a href="products.html" class="nav-link">Products</a>
+                        <a href="products.html" class="nav-link" data-translate="products">Products</a>
                     </li>
                     <li class="nav-item">
-                        <a href="services.html" class="nav-link active">Services</a>
+                        <a href="services.html" class="nav-link active" data-translate="services">Services</a>
                     </li>
                     <li class="nav-item">
-                        <a href="about.html" class="nav-link">About</a>
+                        <a href="about.html" class="nav-link" data-translate="about_us">About Us</a>
                     </li>
                     <li class="nav-item">
-                        <a href="contact.html" class="nav-link">Contact</a>
+                        <a href="contact.html" class="nav-link" data-translate="contact">Contact</a>
                     </li>
                     <li class="nav-item">
-                        <a href="blog.html" class="nav-link">Blog</a>
+                        <a href="blog.html" class="nav-link" data-translate="blog">Blog</a>
                     </li>
                 </ul>
+                
+                <div class="nav-actions">
+                    <div class="language-selector">
+                        <button class="language-btn" id="languageBtn">
+                            <i class="fas fa-globe"></i>
+                            <span id="currentLang">EN</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="language-dropdown" id="languageDropdown">
+                            <a href="#" class="language-option" data-lang="en">
+                                <img src="../images/flags/us.svg" alt="English" class="flag-icon">
+                                English
+                            </a>
+                            <a href="#" class="language-option" data-lang="es">
+                                <img src="../images/flags/es.svg" alt="Español" class="flag-icon">
+                                Español
+                            </a>
+                            <a href="#" class="language-option" data-lang="fr">
+                                <img src="../images/flags/fr.svg" alt="Français" class="flag-icon">
+                                Français
+                            </a>
+                            <a href="#" class="language-option" data-lang="de">
+                                <img src="../images/flags/de.svg" alt="Deutsch" class="flag-icon">
+                                Deutsch
+                            </a>
+                            <a href="#" class="language-option" data-lang="zh">
+                                <img src="../images/flags/cn.svg" alt="中文" class="flag-icon">
+                                中文
+                            </a>
+                            <a href="#" class="language-option" data-lang="pt">
+                                <img src="../images/flags/pt.svg" alt="Português" class="flag-icon">
+                                Português
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <a href="quote.html" class="btn btn-primary" data-translate="get_quote">Get Quote</a>
+                    <a href="contact.html" class="btn btn-secondary" data-translate="contact_us">Contact Us</a>
+                </div>
                 
                 <div class="nav-toggle" id="mobile-menu">
                     <span class="bar"></span>
@@ -54,8 +94,13 @@
     <section class="page-header">
         <div class="container">
             <div class="header-content">
-                <h1 class="fade-in">Our Services</h1>
-                <p class="fade-in">Comprehensive manufacturing solutions for your backpack business needs</p>
+                <h1 class="fade-in" data-translate="services_title">Our Services</h1>
+                <p class="fade-in" data-translate="services_subtitle">Comprehensive manufacturing solutions for your backpack business needs</p>
+                <nav class="breadcrumb">
+                    <a href="../index.html" data-translate="home">Home</a>
+                    <span>/</span>
+                    <span data-translate="services">Services</span>
+                </nav>
             </div>
         </div>
     </section>
@@ -64,8 +109,8 @@
     <section class="services-overview">
         <div class="container">
             <div class="section-header">
-                <h2 class="fade-in">End-to-End Manufacturing Solutions</h2>
-                <p class="fade-in">From concept to delivery, we provide complete manufacturing services tailored to your business requirements</p>
+                <h2 class="fade-in" data-translate="end_to_end_solutions">End-to-End Manufacturing Solutions</h2>
+                <p class="fade-in" data-translate="end_to_end_solutions_desc">From concept to delivery, we provide complete manufacturing services tailored to your business requirements</p>
             </div>
             
             <div class="services-grid">
@@ -79,13 +124,13 @@
                             <circle cx="35" cy="32" r="2" fill="#3498db"/>
                         </svg>
                     </div>
-                    <h3>Design & Development</h3>
-                    <p>Custom backpack design services from initial concept to final prototype. Our experienced design team works with you to create products that meet your specifications and market requirements.</p>
+                    <h3 data-translate="design_development">Design & Development</h3>
+                    <p data-translate="design_development_desc">Custom backpack design services from initial concept to final prototype. Our experienced design team works with you to create products that meet your specifications and market requirements.</p>
                     <ul class="service-features">
-                        <li>Concept Development</li>
-                        <li>3D Modeling & Prototyping</li>
-                        <li>Material Selection</li>
-                        <li>Technical Drawings</li>
+                        <li data-translate="concept_development">Concept Development</li>
+                        <li data-translate="3d_modeling_prototyping">3D Modeling & Prototyping</li>
+                        <li data-translate="material_selection">Material Selection</li>
+                        <li data-translate="technical_drawings">Technical Drawings</li>
                     </ul>
                 </div>
                 
@@ -99,13 +144,13 @@
                             <path d="M42 15l2 2 4-4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </div>
-                    <h3>Quality Assurance</h3>
-                    <p>Comprehensive quality control processes ensuring every product meets international standards. We implement rigorous testing protocols throughout the manufacturing process.</p>
+                    <h3 data-translate="quality_assurance">Quality Assurance</h3>
+                    <p data-translate="quality_assurance_desc">Comprehensive quality control processes ensuring every product meets international standards. We implement rigorous testing protocols throughout the manufacturing process.</p>
                     <ul class="service-features">
-                        <li>Material Testing</li>
-                        <li>Production Monitoring</li>
-                        <li>Final Inspection</li>
-                        <li>Certification Support</li>
+                        <li data-translate="material_testing">Material Testing</li>
+                        <li data-translate="production_monitoring">Production Monitoring</li>
+                        <li data-translate="final_inspection">Final Inspection</li>
+                        <li data-translate="certification_support">Certification Support</li>
                     </ul>
                 </div>
                 
@@ -118,13 +163,13 @@
                             <path d="M30 15v7M25 17l5 5 5-5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </div>
-                    <h3>Bulk Manufacturing</h3>
-                    <p>Large-scale production capabilities with flexible order quantities. Our state-of-the-art facilities can handle orders from hundreds to hundreds of thousands of units.</p>
+                    <h3 data-translate="bulk_manufacturing">Bulk Manufacturing</h3>
+                    <p data-translate="bulk_manufacturing_desc">Large-scale production capabilities with flexible order quantities. Our state-of-the-art facilities can handle orders from hundreds to hundreds of thousands of units.</p>
                     <ul class="service-features">
-                        <li>Scalable Production</li>
-                        <li>Flexible MOQ</li>
-                        <li>Fast Turnaround</li>
-                        <li>Cost Optimization</li>
+                        <li data-translate="scalable_production">Scalable Production</li>
+                        <li data-translate="flexible_moq">Flexible MOQ</li>
+                        <li data-translate="fast_turnaround">Fast Turnaround</li>
+                        <li data-translate="cost_optimization">Cost Optimization</li>
                     </ul>
                 </div>
                 
@@ -138,13 +183,13 @@
                             <path d="M41 45h8M45 41v8" stroke="white" stroke-width="2" stroke-linecap="round"/>
                         </svg>
                     </div>
-                    <h3>Custom Branding</h3>
-                    <p>Complete branding solutions including logo placement, custom labels, packaging design, and brand identity integration throughout your product line.</p>
+                    <h3 data-translate="custom_branding">Custom Branding</h3>
+                    <p data-translate="custom_branding_desc">Complete branding solutions including logo placement, custom labels, packaging design, and brand identity integration throughout your product line.</p>
                     <ul class="service-features">
-                        <li>Logo Integration</li>
-                        <li>Custom Labels</li>
-                        <li>Packaging Design</li>
-                        <li>Brand Guidelines</li>
+                        <li data-translate="logo_integration">Logo Integration</li>
+                        <li data-translate="custom_labels">Custom Labels</li>
+                        <li data-translate="packaging_design">Packaging Design</li>
+                        <li data-translate="brand_guidelines">Brand Guidelines</li>
                     </ul>
                 </div>
                 
@@ -158,13 +203,13 @@
                             <circle cx="30" cy="15" r="3" fill="white"/>
                         </svg>
                     </div>
-                    <h3>Supply Chain Management</h3>
-                    <p>Efficient supply chain coordination from raw materials to finished products. We manage the entire process to ensure timely delivery and cost-effectiveness.</p>
+                    <h3 data-translate="supply_chain_management">Supply Chain Management</h3>
+                    <p data-translate="supply_chain_management_desc">Efficient supply chain coordination from raw materials to finished products. We manage the entire process to ensure timely delivery and cost-effectiveness.</p>
                     <ul class="service-features">
-                        <li>Material Sourcing</li>
-                        <li>Inventory Management</li>
-                        <li>Logistics Coordination</li>
-                        <li>Delivery Tracking</li>
+                        <li data-translate="material_sourcing">Material Sourcing</li>
+                        <li data-translate="inventory_management">Inventory Management</li>
+                        <li data-translate="logistics_coordination">Logistics Coordination</li>
+                        <li data-translate="delivery_tracking">Delivery Tracking</li>
                     </ul>
                 </div>
                 
@@ -177,13 +222,13 @@
                             <circle cx="30" cy="30" r="2" fill="white"/>
                         </svg>
                     </div>
-                    <h3>After-Sales Support</h3>
-                    <p>Comprehensive post-delivery support including warranty services, technical assistance, and ongoing consultation for your business growth.</p>
+                    <h3 data-translate="after_sales_support">After-Sales Support</h3>
+                    <p data-translate="after_sales_support_desc">Comprehensive post-delivery support including warranty services, technical assistance, and ongoing consultation for your business growth.</p>
                     <ul class="service-features">
-                        <li>Technical Support</li>
-                        <li>Warranty Services</li>
-                        <li>Business Consultation</li>
-                        <li>Market Insights</li>
+                        <li data-translate="technical_support">Technical Support</li>
+                        <li data-translate="warranty_services">Warranty Services</li>
+                        <li data-translate="business_consultation">Business Consultation</li>
+                        <li data-translate="market_insights">Market Insights</li>
                     </ul>
                 </div>
             </div>
@@ -194,48 +239,48 @@
     <section class="manufacturing-process">
         <div class="container">
             <div class="section-header">
-                <h2 class="fade-in">Our Manufacturing Process</h2>
-                <p class="fade-in">A streamlined approach ensuring quality and efficiency at every step</p>
+                <h2 class="fade-in" data-translate="manufacturing_process_title">Our Manufacturing Process</h2>
+                <p class="fade-in" data-translate="manufacturing_process_desc">A streamlined approach ensuring quality and efficiency at every step</p>
             </div>
             
             <div class="process-timeline">
                 <div class="process-step fade-in">
                     <div class="step-number">01</div>
                     <div class="step-content">
-                        <h3>Consultation & Planning</h3>
-                        <p>Initial consultation to understand your requirements, market analysis, and project planning with detailed timelines and specifications.</p>
+                        <h3 data-translate="consultation_planning">Consultation & Planning</h3>
+                        <p data-translate="consultation_planning_desc">Initial consultation to understand your requirements, market analysis, and project planning with detailed timelines and specifications.</p>
                     </div>
                 </div>
                 
                 <div class="process-step fade-in">
                     <div class="step-number">02</div>
                     <div class="step-content">
-                        <h3>Design & Prototyping</h3>
-                        <p>Custom design development, 3D modeling, and prototype creation for your approval before moving to production phase.</p>
+                        <h3 data-translate="design_prototyping">Design & Prototyping</h3>
+                        <p data-translate="design_prototyping_desc">Custom design development, 3D modeling, and prototype creation for your approval before moving to production phase.</p>
                     </div>
                 </div>
                 
                 <div class="process-step fade-in">
                     <div class="step-number">03</div>
                     <div class="step-content">
-                        <h3>Material Sourcing</h3>
-                        <p>Procurement of high-quality materials from trusted suppliers, ensuring compliance with your specifications and quality standards.</p>
+                        <h3 data-translate="material_sourcing_step">Material Sourcing</h3>
+                        <p data-translate="material_sourcing_step_desc">Procurement of high-quality materials from trusted suppliers, ensuring compliance with your specifications and quality standards.</p>
                     </div>
                 </div>
                 
                 <div class="process-step fade-in">
                     <div class="step-number">04</div>
                     <div class="step-content">
-                        <h3>Production & Quality Control</h3>
-                        <p>Efficient manufacturing with continuous quality monitoring, regular inspections, and adherence to international standards.</p>
+                        <h3 data-translate="production_quality_control">Production & Quality Control</h3>
+                        <p data-translate="production_quality_control_desc">Efficient manufacturing with continuous quality monitoring, regular inspections, and adherence to international standards.</p>
                     </div>
                 </div>
                 
                 <div class="process-step fade-in">
                     <div class="step-number">05</div>
                     <div class="step-content">
-                        <h3>Packaging & Delivery</h3>
-                        <p>Professional packaging, final quality checks, and coordinated delivery to your specified location with full tracking support.</p>
+                        <h3 data-translate="packaging_delivery">Packaging & Delivery</h3>
+                        <p data-translate="packaging_delivery_desc">Professional packaging, final quality checks, and coordinated delivery to your specified location with full tracking support.</p>
                     </div>
                 </div>
             </div>
@@ -246,39 +291,39 @@
     <section class="capabilities">
         <div class="container">
             <div class="section-header">
-                <h2 class="fade-in">Our Capabilities</h2>
-                <p class="fade-in">Advanced manufacturing capabilities to meet diverse business requirements</p>
+                <h2 class="fade-in" data-translate="our_capabilities">Our Capabilities</h2>
+                <p class="fade-in" data-translate="our_capabilities_desc">Advanced manufacturing capabilities to meet diverse business requirements</p>
             </div>
             
             <div class="capabilities-grid">
                 <div class="capability-item fade-in">
-                    <h3>Production Capacity</h3>
-                    <p>50,000+ units per month with scalable production lines</p>
+                    <h3 data-translate="production_capacity">Production Capacity</h3>
+                    <p data-translate="production_capacity_desc">50,000+ units per month with scalable production lines</p>
                 </div>
                 
                 <div class="capability-item fade-in">
-                    <h3>Lead Time</h3>
-                    <p>15-30 days for standard orders, expedited options available</p>
+                    <h3 data-translate="lead_time">Lead Time</h3>
+                    <p data-translate="lead_time_desc">15-30 days for standard orders, expedited options available</p>
                 </div>
                 
                 <div class="capability-item fade-in">
-                    <h3>Minimum Order</h3>
-                    <p>Flexible MOQ starting from 100 pieces for custom designs</p>
+                    <h3 data-translate="minimum_order">Minimum Order</h3>
+                    <p data-translate="minimum_order_desc">Flexible MOQ starting from 100 pieces for custom designs</p>
                 </div>
                 
                 <div class="capability-item fade-in">
-                    <h3>Certifications</h3>
-                    <p>ISO 9001:2015, BSCI, OEKO-TEX, CE certified manufacturing</p>
+                    <h3 data-translate="certifications">Certifications</h3>
+                    <p data-translate="certifications_desc">ISO 9001:2015, BSCI, OEKO-TEX, CE certified manufacturing</p>
                 </div>
                 
                 <div class="capability-item fade-in">
-                    <h3>Customization</h3>
-                    <p>Full customization options for design, materials, and branding</p>
+                    <h3 data-translate="customization">Customization</h3>
+                    <p data-translate="customization_desc">Full customization options for design, materials, and branding</p>
                 </div>
                 
                 <div class="capability-item fade-in">
-                    <h3>Global Shipping</h3>
-                    <p>Worldwide delivery with trusted logistics partners</p>
+                    <h3 data-translate="global_shipping">Global Shipping</h3>
+                    <p data-translate="global_shipping_desc">Worldwide delivery with trusted logistics partners</p>
                 </div>
             </div>
         </div>
@@ -288,11 +333,11 @@
     <section class="cta-section">
         <div class="container">
             <div class="cta-content">
-                <h2 class="fade-in">Ready to Start Your Project?</h2>
-                <p class="fade-in">Let's discuss your backpack manufacturing needs and create a solution that fits your business goals</p>
+                <h2 class="fade-in" data-translate="ready_to_start">Ready to Start Your Project?</h2>
+                <p class="fade-in" data-translate="ready_to_start_desc">Let's discuss your backpack manufacturing needs and create a solution that fits your business goals</p>
                 <div class="cta-buttons fade-in">
-                    <a href="contact.html" class="btn-primary">Get a Quote</a>
-                    <a href="quote.html" class="btn-secondary">Request Consultation</a>
+                    <a href="contact.html" class="btn-primary" data-translate="get_quote">Get a Quote</a>
+                    <a href="quote.html" class="btn-secondary" data-translate="request_consultation">Request Consultation</a>
                 </div>
             </div>
         </div>
@@ -306,49 +351,71 @@
                     <div class="footer-logo">
                         <img src="../images/logo.svg" alt="BackpacksForBoys Logo" class="footer-logo-img">
                     </div>
-                    <p>Leading manufacturer of high-quality backpacks for boys, serving B2B clients worldwide with innovative designs and reliable production.</p>
+                    <p data-translate="footer_description">Leading manufacturer of high-quality backpacks for boys, serving B2B clients worldwide with innovative designs and reliable production.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Facebook">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="LinkedIn">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                        </a>
+                    </div>
 
                 </div>
                 
                 <div class="footer-section">
-                    <h3>Quick Links</h3>
+                    <h3 data-translate="quick_links">Quick Links</h3>
                     <ul class="footer-links">
-                        <li><a href="../index.html">Home</a></li>
-                        <li><a href="products.html">Products</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="../index.html" data-translate="home">Home</a></li>
+                        <li><a href="products.html" data-translate="products">Products</a></li>
+                        <li><a href="services.html" data-translate="services">Services</a></li>
+                        <li><a href="about.html" data-translate="about_us">About Us</a></li>
+                        <li><a href="contact.html" data-translate="contact">Contact</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-section">
-                    <h3>Products</h3>
+                    <h3 data-translate="products">Products</h3>
                     <ul class="footer-links">
-                        <li><a href="products.html#school">School Backpacks</a></li>
-                        <li><a href="products.html#sports">Sports Backpacks</a></li>
-                        <li><a href="products.html#travel">Travel Backpacks</a></li>
-                        <li><a href="products.html#laptop">Laptop Backpacks</a></li>
-                        <li><a href="products.html#outdoor">Outdoor Backpacks</a></li>
+                        <li><a href="products.html#school" data-translate="school_backpacks">School Backpacks</a></li>
+                        <li><a href="products.html#sports" data-translate="sports_backpacks">Sports Backpacks</a></li>
+                        <li><a href="products.html#travel" data-translate="travel_backpacks">Travel Backpacks</a></li>
+                        <li><a href="products.html#laptop" data-translate="laptop_backpacks">Laptop Backpacks</a></li>
+                        <li><a href="products.html#outdoor" data-translate="outdoor_backpacks">Outdoor Backpacks</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-section">
-                    <h3>Contact Info</h3>
+                    <h3 data-translate="contact_info">Contact Info</h3>
                     <div class="contact-info">
-                        <p>Location: Huachuang Park, Tiyu Street, Huada Street, Fengze District, Quanzhou City, Fujian Province, China</p>
-                        <p>Phone: +86 17750020688</p>
-                        <p>Email: cco@junyuanbags.com</p>
+                        <p><span data-translate="location">Location:</span> Huachuang Park, Tiyu Street, Huada Street, Fengze District, Quanzhou City, Fujian Province, China</p>
+                        <p><span data-translate="phone">Phone:</span> +86 17750020688</p>
+                        <p><span data-translate="email">Email:</span> cco@junyuanbags.com</p>
                     </div>
                 </div>
             </div>
             
             <div class="footer-bottom">
                 <div class="footer-bottom-content">
-                    <p>&copy; 2024 BackpacksForBoys. All rights reserved.</p>
+                    <p data-translate="copyright">&copy; 2024 BackpacksForBoys. All rights reserved.</p>
                     <div class="footer-bottom-links">
-                        <a href="#">Privacy Policy</a>
-                        <a href="#">Terms of Service</a>
-                        <a href="#">Cookie Policy</a>
+                        <a href="#" data-translate="privacy_policy">Privacy Policy</a>
+                        <a href="#" data-translate="terms_of_service">Terms of Service</a>
+                        <a href="#" data-translate="cookie_policy">Cookie Policy</a>
                     </div>
                 </div>
             </div>
@@ -356,5 +423,13 @@
     </footer>
 
     <script src="../js/script.js"></script>
+    <script>
+        // Initialize language manager
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof LanguageManager !== 'undefined') {
+                LanguageManager.init();
+            }
+        });
+    </script>
 </body>
 </html>

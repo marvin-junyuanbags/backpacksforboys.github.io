@@ -3,10 +3,12 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize all components
     initNavigation();
     initAnimations();
-    initLanguageSelector();
     initContactForm();
     initScrollEffects();
     initMobileMenu();
+    
+    // Language manager is initialized in translations.js
+    // No need to call initLanguageSelector() anymore
 });
 
 // Navigation functionality
@@ -101,28 +103,11 @@ function initAnimations() {
     });
 }
 
-// Language selector functionality
+// Language selector functionality is now handled by LanguageManager in translations.js
+// This function is kept for backward compatibility but is no longer used
 function initLanguageSelector() {
-    const languageSelector = document.querySelector('.language-selector');
-    
-    if (languageSelector) {
-        languageSelector.addEventListener('change', function() {
-            const selectedLanguage = this.value;
-            
-            // Store language preference
-            localStorage.setItem('preferredLanguage', selectedLanguage);
-            
-            // Here you would implement actual language switching
-            // For now, we'll just show a notification
-            showNotification(`Language changed to ${selectedLanguage.toUpperCase()}`);
-        });
-        
-        // Load saved language preference
-        const savedLanguage = localStorage.getItem('preferredLanguage');
-        if (savedLanguage) {
-            languageSelector.value = savedLanguage;
-        }
-    }
+    // Language functionality moved to translations.js
+    console.log('Language selector initialized by LanguageManager');
 }
 
 // Contact form functionality
